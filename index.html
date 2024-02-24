@@ -5,6 +5,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>B9A5</title>
+  <style>
+    .btn-selected {
+      background-color: blue;
+      color: white;
+    }
+  </style>
   <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="styles/styles.css">
@@ -72,7 +78,7 @@
               our modern buses. From solo trips to group adventures, we make travel memorable. Enjoy affordable fares,
               top-notch amenities, and friendly service. Let Fun Travel redefine your journey with laughter, discovery,
               and unforgettable experiences!</p>
-            <button class="btn btn-success bg-lime-600 text-white">Buy Tickets</button>
+            <button id="display-btn" class="btn btn-success bg-lime-600 text-white">Buy Tickets</button>
           </div>
         </div>
       </div>
@@ -137,7 +143,7 @@
     <br>
     <br>
     <!-- main body -->
-    <section class="bg-slate-200">
+    <section id="main-body" class="bg-slate-200">
       <br>
       <br>
       <br>
@@ -239,29 +245,29 @@
                   </div>
                 </div>
                 <p>-------------------------------------------------------------------------</p>
-                <div>
-                    <button class="btn ml-96">◍</button>
-                    <div class="flex justify-between">
-                      <div>
-                        <button class="btn">A1</button>
-                        <button class="btn">A2</button>
-                      </div>
-                      <div>
-                        <button class="btn">A3</button>
-                        <button class="btn">A4</button>
-                      </div>
+                <div id="select-btn">
+                  <button class="btn ml-96">◍</button>
+                  <div class="flex justify-between">
+                    <div>
+                      <button onclick="changeColor('A1')" id="A1" class="btn">A1</button>
+                      <button onclick="changeColor('A2')" id="A2" class="btn">A2</button>
                     </div>
-                    <br>
-                    <div class="flex justify-between">
-                      <div>
-                        <button class="btn">B1</button>
-                        <button class="btn">B2</button>
-                      </div>
-                      <div>
-                        <button class="btn">B3</button>
-                        <button class="btn">B4</button>
-                      </div>
+                    <div>
+                      <button onclick="changeColor('A3')" id="A3" class="btn">A3</button>
+                      <button onclick="changeColor('A4')" id="A4" class="btn">A4</button>
                     </div>
+                  </div>
+                  <br>
+                  <div class="flex justify-between">
+                    <div>
+                      <button onclick="B1" id="B1" class="btn">B1</button>
+                      <button onclick="B2" id="B2" class="btn">B2</button>
+                    </div>
+                    <div>
+                      <button onclick="changeColor('B3')" id="B3" class="btn">B3</button>
+                      <button onclick="changeColor('B4')" id="B4" class="btn">B4</button>
+                    </div>
+                  </div>
                 </div>
               </div>
               <!-- divider -->
@@ -297,7 +303,8 @@
                   </div>
                 </div>
                 <div>
-                  <p>-------------------------------------------------------------------------------------------------</p>
+                  <p>-------------------------------------------------------------------------------------------------
+                  </p>
                 </div>
                 <div class="flex justify-between">
                   <div>
@@ -313,7 +320,7 @@
           </div>
         </div>
       </div>
-      
+
     </section>
 
 
@@ -321,6 +328,7 @@
 
 
   </main>
+  <script src="script/bus.js"></script>
   <script src="script/utility.js"></script>
 
 </body>
